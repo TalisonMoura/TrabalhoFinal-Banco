@@ -8,6 +8,7 @@ namespace TrabalhoFinalBanco
     {
         static void Main(string[] args)
         {
+
             CultureInfo ci = CultureInfo.InvariantCulture;
 
             Console.Write("Entre com o nome do cliente: ");
@@ -16,19 +17,49 @@ namespace TrabalhoFinalBanco
             int numContaCorrente = int.Parse(Console.ReadLine());
             Console.Write($"Entre com o saldo inicial da Conta Corrente {numContaCorrente}: ");
             double saldoInicialCorrente = double.Parse(Console.ReadLine());
-            
+
             Console.WriteLine("");
-            
+
             Console.Write("Entre com o número da Conta Poupança: ");
             int numContaPoupança = int.Parse(Console.ReadLine());
             Console.Write($"Entre com o saldo inicial da Conta Poupança {numContaPoupança}: ");
             double saldoInicialPoupança = double.Parse(Console.ReadLine());
 
-
             Cliente cliente = new Cliente(nome);
-            ContaCorrente contaCorrente = new ContaCorrente(numContaCorrente,saldoInicialCorrente);
+            ContaCorrente contaCorrente = new ContaCorrente(numContaCorrente, saldoInicialCorrente);
             ContaPoupança contaPoupança = new ContaPoupança(numContaPoupança, saldoInicialPoupança);
-            
+            int opcao = 0;
+
+            do
+            {
+                Console.WriteLine("Qual operação deseja realizar?");
+                Console.WriteLine("1 - Creditar\n" +
+                                  "2 - Debitar\n" +
+                                  "3 - Transferir\n" +
+                                  "4 - Saldo\n" +
+                                  "5 - Sair");
+                Console.WriteLine("");
+                opcao = int.Parse(Console.ReadLine());
+                
+                switch (opcao)
+                {
+                    case 1:
+                        break;
+
+                    case 2:
+                        break;
+
+                    case 3:
+                        break;
+
+                    case 4:
+                        break;
+
+                    case 5:
+                        break;
+                }
+
+            } while (opcao != 5);
 
         }
     }
