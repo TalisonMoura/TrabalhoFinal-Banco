@@ -1,0 +1,15 @@
+C:\Users\talis\source\repos\TrabalhoFinalBanco\TrabalhoFinalBanco\bin\Debug\net7.0\TrabalhoFinalBanco.exe
+C:\Users\talis\source\repos\TrabalhoFinalBanco\TrabalhoFinalBanco\bin\Debug\net7.0\TrabalhoFinalBanco.deps.json
+C:\Users\talis\source\repos\TrabalhoFinalBanco\TrabalhoFinalBanco\bin\Debug\net7.0\TrabalhoFinalBanco.runtimeconfig.json
+C:\Users\talis\source\repos\TrabalhoFinalBanco\TrabalhoFinalBanco\bin\Debug\net7.0\TrabalhoFinalBanco.dll
+C:\Users\talis\source\repos\TrabalhoFinalBanco\TrabalhoFinalBanco\bin\Debug\net7.0\TrabalhoFinalBanco.pdb
+C:\Users\talis\source\repos\TrabalhoFinalBanco\TrabalhoFinalBanco\obj\Debug\net7.0\TrabalhoFinalBanco.csproj.AssemblyReference.cache
+C:\Users\talis\source\repos\TrabalhoFinalBanco\TrabalhoFinalBanco\obj\Debug\net7.0\TrabalhoFinalBanco.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\talis\source\repos\TrabalhoFinalBanco\TrabalhoFinalBanco\obj\Debug\net7.0\TrabalhoFinalBanco.AssemblyInfoInputs.cache
+C:\Users\talis\source\repos\TrabalhoFinalBanco\TrabalhoFinalBanco\obj\Debug\net7.0\TrabalhoFinalBanco.AssemblyInfo.cs
+C:\Users\talis\source\repos\TrabalhoFinalBanco\TrabalhoFinalBanco\obj\Debug\net7.0\TrabalhoFinalBanco.csproj.CoreCompileInputs.cache
+C:\Users\talis\source\repos\TrabalhoFinalBanco\TrabalhoFinalBanco\obj\Debug\net7.0\TrabalhoFinalBanco.dll
+C:\Users\talis\source\repos\TrabalhoFinalBanco\TrabalhoFinalBanco\obj\Debug\net7.0\refint\TrabalhoFinalBanco.dll
+C:\Users\talis\source\repos\TrabalhoFinalBanco\TrabalhoFinalBanco\obj\Debug\net7.0\TrabalhoFinalBanco.pdb
+C:\Users\talis\source\repos\TrabalhoFinalBanco\TrabalhoFinalBanco\obj\Debug\net7.0\TrabalhoFinalBanco.genruntimeconfig.cache
+C:\Users\talis\source\repos\TrabalhoFinalBanco\TrabalhoFinalBanco\obj\Debug\net7.0\ref\TrabalhoFinalBanco.dll

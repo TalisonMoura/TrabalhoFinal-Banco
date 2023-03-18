@@ -8,5 +8,6 @@ namespace TrabalhoFinalBanco.Entities
 {
     internal class Cliente
     {
+        public string Nome { get; private set; }
     }
 }
