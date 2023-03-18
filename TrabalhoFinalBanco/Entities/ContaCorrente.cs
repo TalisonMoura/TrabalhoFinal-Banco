@@ -9,7 +9,7 @@ namespace TrabalhoFinalBanco.Entities
 {
     internal class ContaCorrente
     {
-        /* O saldo da conta corrente não pode ficar negativo */
+        /* O saldo da conta corrente pode ficar negativo */
 
         CultureInfo ci = CultureInfo.InvariantCulture;
 
@@ -21,6 +21,7 @@ namespace TrabalhoFinalBanco.Entities
             NumConta = numConta;
             Saldo = saldo;
         }
+
         public override string ToString()
         {
             return ($"Saldo atual na Conta Corrente {NumConta}: R${Saldo.ToString("F2", ci)}");
