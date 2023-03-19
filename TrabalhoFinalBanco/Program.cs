@@ -25,7 +25,6 @@ namespace TrabalhoFinalBanco
             double saldoInicialCorrente = double.Parse(Console.ReadLine(), ci);
             contaCorrente.AdicionarSaldo(saldoInicialCorrente);
 
-
             Console.WriteLine("");
 
             Console.Write("Entre com o número da Conta Poupança: ");
@@ -39,8 +38,7 @@ namespace TrabalhoFinalBanco
 
             int opcao = 0;
             int escolha = 0;
-            double valor = 0;
-            double saldoFinal = 0;
+            double valor = 0.0;
 
             do
             {
@@ -87,8 +85,7 @@ namespace TrabalhoFinalBanco
                         {
                             Console.Write($"Qual valor a debitar na conta corrente {numContaCorrente}: ");
                             valor = double.Parse(Console.ReadLine());
-                            saldoFinal = contaCorrente.Saldo - valor;
-                            contaCorrente.RemoverSaldo(saldoFinal);
+                            contaCorrente.RemoverSaldo(valor);
                             Console.WriteLine(contaCorrente);
                             Console.WriteLine("");
                         }
@@ -96,16 +93,15 @@ namespace TrabalhoFinalBanco
                         {
                             Console.Write($"Qual valor a debitar na conta poupança {numContaPoupanca}: ");
                             valor = double.Parse(Console.ReadLine(), ci);
-                            if (contaPoupanca.Saldo < valor)
+                            if (contaPoupanca.Saldo > valor)
                             {
-                                Console.WriteLine("Saldo Insuficiente");
+                                contaPoupanca.RemoverSaldo(valor);
                                 Console.WriteLine(contaPoupanca);
                                 Console.WriteLine("");
                             }
                             else
                             {
-                                saldoFinal = contaPoupanca.Saldo - valor;
-                                contaPoupanca.RemoverSaldo(saldoFinal);
+                                Console.WriteLine("Saldo Insuficiente");
                                 Console.WriteLine(contaPoupanca);
                                 Console.WriteLine("");
                             }
@@ -119,45 +115,42 @@ namespace TrabalhoFinalBanco
                         escolha = int.Parse(Console.ReadLine());
                         if (escolha == 1)
                         {
-                            Console.Write($"Qual valor a transferir da Conta Corrente{numContaCorrente} para Conta Poupança {numContaPoupanca}: ");
-                            valor = int.Parse(Console.ReadLine(), ci);
+                            Console.Write($"Qual valor a transferir da Conta Corrente {numContaCorrente} para Conta Poupança {numContaPoupanca}: ");
+                            valor = double.Parse(Console.ReadLine(), ci);
 
-                            if (contaCorrente.Saldo < valor)
+                            if (contaCorrente.Saldo > valor)
                             {
-                                Console.WriteLine("Saldo Insuficiente");
+                                contaCorrente.RemoverSaldo(valor);
+                                contaPoupanca.AdicionarSaldo(valor);
                                 Console.WriteLine(contaCorrente);
                                 Console.WriteLine(contaPoupanca);
                                 Console.WriteLine("");
                             }
                             else
                             {
-                                saldoFinal = contaCorrente.Saldo - valor;
-                                contaCorrente.RemoverSaldo(saldoFinal);
-                                contaPoupanca.AdicionarSaldo(saldoFinal);
+                                Console.WriteLine("Saldo Insuficiente");
                                 Console.WriteLine(contaCorrente);
                                 Console.WriteLine(contaPoupanca);
                                 Console.WriteLine("");
                             }
-
                         }
                         else if (escolha == 2)
                         {
-                            Console.Write($"Qual valor a transferir da Conta Poupança{numContaPoupanca} para Conta Corrente {contaCorrente}: ");
-                            valor = int.Parse(Console.ReadLine(), ci);
+                            Console.Write($"Qual valor a transferir da Conta Poupança {numContaPoupanca} para Conta Corrente {numContaCorrente}: ");
+                            valor = double.Parse(Console.ReadLine(), ci);
                             if (contaPoupanca.Saldo > 0)
                             {
-                                if (contaPoupanca.Saldo < valor)
+                                if (contaPoupanca.Saldo > valor)
                                 {
-                                    Console.WriteLine("Saldo Insuficiente");
+                                    contaPoupanca.RemoverSaldo(valor);
+                                    contaCorrente.AdicionarSaldo(valor);
                                     Console.WriteLine(contaPoupanca);
                                     Console.WriteLine(contaCorrente);
                                     Console.WriteLine("");
                                 }
                                 else
                                 {
-                                    saldoFinal = contaPoupanca.Saldo - valor;
-                                    contaPoupanca.RemoverSaldo(saldoFinal);
-                                    contaCorrente.AdicionarSaldo(saldoFinal);
+                                    Console.WriteLine("Saldo Insuficiente");
                                     Console.WriteLine(contaPoupanca);
                                     Console.WriteLine(contaCorrente);
                                     Console.WriteLine("");
@@ -174,10 +167,13 @@ namespace TrabalhoFinalBanco
                         break;
 
                     case 5:
-                        Console.WriteLine($"{cliente} Muito Obrigado(a) por ultilizar nossos serviços!");
+                        Console.WriteLine("");
+                        Console.WriteLine($"{cliente}, Muito Obrigado(a) por ultilizar nossos serviços!");
+                        Console.WriteLine("");
                         break;
                     default:
                         Console.WriteLine("Escolha uma opção correta!");
+                        Console.WriteLine("");
                         break;
                 }
             } while (opcao != 5);
