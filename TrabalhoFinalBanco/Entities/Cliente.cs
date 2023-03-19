@@ -14,5 +14,9 @@ namespace TrabalhoFinalBanco.Entities
         {
             Nome = nome;
         }
+        public override string ToString()
+        {
+            return ($"Senhor(a) {Nome}");
+        }
     }
 }
