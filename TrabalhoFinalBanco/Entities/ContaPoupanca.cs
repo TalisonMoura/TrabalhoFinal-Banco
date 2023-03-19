@@ -16,10 +16,17 @@ namespace TrabalhoFinalBanco.Entities
         public int NumConta { get; private set; }
         public double Saldo { get; private set; }
 
-        public ContaPoupanca(int numConta, double saldo)
+        public ContaPoupanca(int numConta)
         {
             NumConta = numConta;
-            Saldo = saldo;
+        }
+        public void AdicionarSaldo(double valor)
+        {
+            Saldo += valor;
+        }
+        public void RemoverSaldo(double valor)
+        {
+            Saldo -= valor;
         }
         public override string ToString()
         {

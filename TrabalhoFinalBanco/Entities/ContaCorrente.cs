@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace TrabalhoFinalBanco.Entities
 {
@@ -16,12 +17,18 @@ namespace TrabalhoFinalBanco.Entities
         public int NumConta { get; private set; }
         public double Saldo { get; private set; }
 
-        public ContaCorrente(int numConta, double saldo)
+        public ContaCorrente(int numConta)
         {
             NumConta = numConta;
-            Saldo = saldo;
         }
-
+        public void AdicionarSaldo(double valor)
+        {
+            Saldo += valor;
+        }
+        public void RemoverSaldo(double valor)
+        {
+            Saldo -= valor;
+        }
         public override string ToString()
         {
             return ($"Saldo atual na Conta Corrente {NumConta}: R${Saldo.ToString("F2", ci)}");
