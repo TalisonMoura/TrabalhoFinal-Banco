@@ -160,6 +160,7 @@ namespace TrabalhoFinalBanco
                         break;
 
                     case 4:
+                        Console.WriteLine("");
                         Console.WriteLine(cliente);
                         Console.WriteLine(contaCorrente);
                         Console.WriteLine(contaPoupanca);
@@ -172,6 +173,7 @@ namespace TrabalhoFinalBanco
                         Console.WriteLine("");
                         break;
                     default:
+                        Console.WriteLine("");
                         Console.WriteLine("Escolha uma opção correta!");
                         Console.WriteLine("");
                         break;
