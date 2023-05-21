@@ -5,29 +5,47 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
+using TrabalhoFinalBanco.Service;
 
 namespace TrabalhoFinalBanco.Entities
 {
-    internal class ContaCorrente
+    public class ContaCorrente : IConta
     {
         /* O saldo da conta corrente pode ficar negativo */
 
         CultureInfo ci = CultureInfo.InvariantCulture;
 
-        public int NumConta { get; private set; }
-        public double Saldo { get; private set; }
+        public int NumConta { get => _NumConta ; set => _NumConta = value; }
+        private int _NumConta;
+        public double Saldo { get => _Saldo; set => _Saldo = value; }
+        private double _Saldo;
 
-        public ContaCorrente(int numConta)
+        public ContaCorrente(int _NumConta)
         {
-            NumConta = numConta;
+            NumConta = _NumConta;
         }
+
         public void AdicionarSaldo(double valor)
         {
-            Saldo += valor;
+            if(valor <= 0)
+            {
+                Console.WriteLine("Insira um valor válido!");
+            }
+            else
+            {
+                _Saldo += valor;
+            }
         }
         public void RemoverSaldo(double valor)
         {
-            Saldo -= valor;
+            if (valor <= 0)
+            {
+                Console.WriteLine("Insira um valor válido!");
+            }
+            else
+            {
+                _Saldo -= valor;
+            }
         }
         public override string ToString()
         {

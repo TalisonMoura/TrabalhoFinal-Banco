@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.Design;
 using System.Globalization;
+using System.Reflection.Metadata.Ecma335;
 using TrabalhoFinalBanco.Entities;
 
 namespace TrabalhoFinalBanco
@@ -118,7 +119,7 @@ namespace TrabalhoFinalBanco
                             Console.Write($"Qual valor a transferir da Conta Corrente {numContaCorrente} para Conta Poupança {numContaPoupanca}: ");
                             valor = double.Parse(Console.ReadLine(), ci);
 
-                            if (contaCorrente.Saldo > valor)
+                            if (contaCorrente.Saldo >= valor)
                             {
                                 contaCorrente.RemoverSaldo(valor);
                                 contaPoupanca.AdicionarSaldo(valor);
@@ -140,7 +141,7 @@ namespace TrabalhoFinalBanco
                             valor = double.Parse(Console.ReadLine(), ci);
                             if (contaPoupanca.Saldo > 0)
                             {
-                                if (contaPoupanca.Saldo > valor)
+                                if (contaPoupanca.Saldo >= valor)
                                 {
                                     contaPoupanca.RemoverSaldo(valor);
                                     contaCorrente.AdicionarSaldo(valor);

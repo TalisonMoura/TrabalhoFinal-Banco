@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrabalhoFinalBanco.Entities
 {
-    internal class Cliente
+    public class Cliente
     {
         public string Nome { get; private set; }
 
